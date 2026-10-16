@@ -1,0 +1,15 @@
+## Build and temporary files
+bin/
+obj/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Visual Studio
+.vs/
+.vscode/
+
+## Packages
+packages/*
+!packages/repositories.config

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    @* Favicon (browser tab icon) *@
+    <link rel="icon" type="image/png" href="https://placehold.co/64x64/0d6efd/ffffff/png?text=A" />
+
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+    <style>
+        .navbar-brand {
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+            .navbar-brand img {
+                height: 30px;
+                width: auto;
+            }
+
+        .banner-img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .footer-logo {
+            height: 24px;
+            width: auto;
+            vertical-align: middle;
+            margin-right: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                @* Navbar logo + app name *@
+                <a class="navbar-brand" href="@Url.Action("Index", "Product", new { area = "" })">
+                    <img src="https://placehold.co/120x40/0d6efd/ffffff/png?text=LOGO" alt="Logo" />
+                    <span>Application name</span>
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+
+        @* Banner image *@
+        <img src="/Content/images/banner.jpg" alt="Banner" class="banner-img" />
+
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>
+                <img src="https://placehold.co/80x24/333333/ffffff/png?text=LOGO" alt="Logo" class="footer-logo" />
+                &copy; @DateTime.Now.Year - My ASP.NET Application
+            </p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

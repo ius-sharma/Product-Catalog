@@ -1,0 +1,20 @@
+﻿@model List<ProductCatalog.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Product Catalog</h2>
+<div>
+    @foreach (var p in Model)
+    {
+        <div>
+            <img src="@p.ImageUrl" width="150" height="150" />
+            <h3>@p.Name</h3>
+            <p>Product Category : @p.Category</p>
+            <p>Product Price : @p.Price</p>
+            <hr />
+        </div>
+    }
+</div>
+
